@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CI/CD Static Site</title>
+    <title>Gamble Click</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="box">
+        <h1>GAMBLE CLICK</h1>
+        <p>premi e spera</p>
 
-    <div class="container">
-        <h1>Pipeline CI/CD 🚀</h1>
-
-        <p>Sito deployato automaticamente con GitHub Actions.</p>
-
-        <a href="https://github.com">
-            GitHub
-        </a>
+        <button onclick="play()">SPIN</button>
+        <h2 id="result"></h2>
     </div>
 
+    <script>
+        function play() {
+            const win = Math.random() > 0.5;
+            document.getElementById("result").textContent = win ? "WIN 💰" : "LOSE 💀";
+        }
+    </script>
 </body>
 
 </html>
